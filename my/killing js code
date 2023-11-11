@@ -1,0 +1,17 @@
+my_gcp_vm
+pwd
+cd ../aluru_n/myapp
+
+
+ps -eaf |grep PM2
+---------------------------------
+my_gcp_vm@lab1:/home/aluru_n/myapp/routes$ ps -eaf |grep PM2
+my_gcp_+   20557       1  0 14:28 ?        00:00:04 PM2 v5.3.0: God Daemon (/hom                                                                                                             e/my_gcp_vm/.pm2
+---------------------------------
+kill 20557
+---------------------------------
+
+cd /home/aluru_n/myapp/bin/
+PORT=8080 DEBUG=myapp:* pm2 start www
+
+pm2 logs

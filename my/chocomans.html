@@ -1,0 +1,225 @@
+ <!DOCTYPE html>  
+<html>  
+<head>  
+<title>Chocomans</title>  
+</head>  
+<body>  
+ <h1>Chocomans</h1>  
+    
+    
+ <form>
+  <fieldset>
+    <legend>Cake 1kg</legend>
+    <label><input type="checkbox" name="chocomans[]" value="Classic Vanilla - Rs.550"> Classic Vanilla - Rs.550</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Mango - Rs.600"> Mango - Rs.600</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Pineapple - Rs.600"> Pineapple - Rs.600</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate Delight - Rs.675"> Chocolate Delight - Rs.675</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Strawberry - Rs.675"> Strawberry - Rs.675</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Irish Coffee - Rs.700"> Irish Coffee - Rs.700</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Lychee - Rs.650"> Lychee - Rs.650</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Black Forest Classic - Rs.675"> Black Forest Classic - Rs.675</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Black Currant - Rs.675"> Black Currant - Rs.675</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Kiwi - Rs.700"> Kiwi - Rs.700</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Fig & Honey - Rs.700"> Fig & Honey - Rs.700</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Blueberry - Rs.750"> Blueberry - Rs.750</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="White Forest Cake - Rs.750"> White Forest Cake - Rs.750</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="German Black Forest - Rs.750"> German Black Forest - Rs.750</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate Truffle Cake - Rs.775"> Chocolate Truffle Cake - Rs.775</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate Fantasy - Rs.825"> Chocolate Fantasy - Rs.825</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Butter Scotch - Rs.725"> Butter Scotch - Rs.725</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Toffee Chocolate Cake - Rs.850"> Toffee Chocolate Cake - Rs.850</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Florida Fruit Cake - Rs.750"> Florida Fruit Cake - Rs.750</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Red velvet - Rs.950"> Red velvet - Rs.950</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Spanish Delight Cake (Dulce De Leche+Almond) - Rs.850">Spanish Delight Cake (Dulce De Leche+Almond) - Rs.850</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Coconut Caramel Cake - Rs.750"> Coconut Caramel Cake - Rs.750</label><br> 
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate fudge - Rs.1000"> Chocolate fudge - Rs.1000</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Butterscotch & Blueberry - Rs.800"> Butterscotch & Blueberry - Rs.800</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Black Current & Strawberry - Rs.800"> Black Current & Strawberry - Rs.800</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Raspberry Chocolate cake - Rs.850"> Raspberry Chocolate cake - Rs.850</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Rocky Almond - Rs.1000"> Rocky Almond - Rs.1000</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate Hazelnut Cake - Rs.1100"> Chocolate Hazelnut Cake - Rs.1100</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Ferrero Rocher Cake - Rs.1450"> Ferrero Rocher Cake - Rs.1450</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Chocolate Heart / Ball (Choice of Choco Truffle or Red Velvet) - Rs.1250 "> Chocolate Heart / Ball (Choice of Choco Truffle or Red Velvet) - Rs.1250 </label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Golden Heart / Ball (Cholce of Choco Truffle or Red Velvet) - Rs.1350"> Golden Heart / Ball (Cholce of Choco Truffle or Red Velvet) - Rs.1350</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Gulab Jamun Cake - Rs.900"> Gulab Jamun Cake - Rs.900</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Rasamalai Cake - Rs.975"> Rasamalai Cake - Rs.975</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Motichur Ladoo Cake - Rs.900"> Motichur Ladoo Cake - Rs.900</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Newyork Cheese Cake - Rs.950"> Newyork Cheese Cake - Rs.950</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Blueberry Cheese Cake - Rs.1100"> Blueberry Cheese Cake - Rs.1100</label><br>
+    <label><input type="checkbox" name="chocomans[]" value="Strawberry Cheese Cake - Rs.1100">Strawberry Cheese Cake - Rs.1100</label><br>
+  </fieldset>
+</form>
+ </body>
+    <body>
+    <script>
+              //chocomans Cart  - START
+
+let chocomanscart = [];
+let chocomanstotalCost = 0;
+const chocomanscartList = document.querySelector('#chocomanscartList');
+const chocomansnumItems = document.querySelector('#chocomansnumItems');
+const chocomanstotalCostDisplay = document.querySelector('#chocomanstotalCost');
+
+function addToCartchocomans() {
+    const btnchocomans = document.querySelector('#btnchocomans');
+    btnchocomans.addEventListener('click', (event) => {
+         let checkboxes = document.querySelectorAll('input[name="chocomans[]"]:checked');
+         checkboxes.forEach((checkbox) => {
+            let optionText = checkbox.value + "text";
+            let optionValue = checkbox.value;
+            chocomanscart.push({ value: optionValue, text: optionText, cost: parseInt(optionText.split('Rs.')[1]) });
+            chocomanstotalCost += parseInt(optionText.split('Rs.')[1]);
+       });
+       
+        let whatsappMessage = "";
+        for (const [index, item] of chocomanscart.entries()) {
+            whatsappMessage = whatsappMessage + item.value + "\n";
+        }
+        alert(whatsappMessage);
+        document.getElementById('cartTextchocomans').value = whatsappMessage;
+
+       document.getElementById("chocomansnumItems").innerHTML = chocomanscart.length;
+       document.getElementById("chocomanstotalCost").innerHTML = chocomanstotalCost;
+
+       const element = document.getElementById("chocomanscartList");
+       
+        for (const [index, item] of chocomanscart.entries()) {
+            const itemLi = document.createElement('li');
+            itemLi.innerText = item.value;
+            const removeButton = document.createElement('button');
+            removeButton.innerText = 'Remove';
+            removeButton.addEventListener('click', () => removeItemchocomans(index), false);
+            itemLi.appendChild(removeButton);
+            element.appendChild(itemLi);
+         }
+
+    });
+     
+}
+
+function removeItemchocomans(index) {
+    event.preventDefault();  
+    
+    const item = chocomanscart[index];
+    chocomanstotalCost -= item.cost;
+    chocomanscart.splice(index, 1);
+
+    const element = document.getElementById("chocomanscartList");
+    element.innerHTML = '';
+
+
+    let whatsappMessage = "";
+    for (const [index, item] of chocomanscart.entries()) {
+          whatsappMessage = whatsappMessage + item.value + "\n";
+    }
+    document.getElementById('cartTextchocomans').value = whatsappMessage;
+    
+    document.getElementById("chocomansnumItems").innerHTML = chocomanscart.length;
+    document.getElementById("chocomanstotalCost").innerHTML = chocomanstotalCost;
+    
+    for (const [index, item] of chocomanscart.entries()) {
+      const itemLi = document.createElement('li');
+      itemLi.innerText = item.value;
+      const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.addEventListener('click', () => removeItemchocomans(index), false);
+      itemLi.appendChild(removeButton);
+      element.appendChild(itemLi);
+    }
+    
+}
+  
+function orderNowchocomans() {
+    
+  //  if (chocomanscart.length === 0) {
+    //  alert('Your cart is empty. Please add items to your cart.');
+    //} else {
+      //alert(`Thank you for your order! Your total is Rs.${chocomanstotalCost}.`);
+      //clearCartchocomans();
+    //}
+    //window.open("EnterAddress.html", "popup");
+
+
+    
+}
+
+function clearCartchocomans() {
+    const element = document.getElementById("chocomanscartList");
+    element.innerHTML = '';
+    
+    document.getElementById("chocomansnumItems").innerHTML = 0;
+    document.getElementById("chocomanstotalCost").innerHTML = 0;
+
+
+    document.getElementById('cartTextchocomans').value = "";
+    
+    chocomanscart = [];
+    chocomanstotalCost = 0;
+    chocomansnumItems.innerText = '0';
+    //chocomanscartList.innerHTML = '';
+    
+    chocomanstotalCostDisplay.innerText = '0';
+}
+    
+//chocomans Cart - End
+
+        
+        </script>
+    </body>
+
+
+</html>                   
+                            
+                                  <p>
+                                      <br><br>
+    <font color="red">Warning : Add Item To Cart Before Placing Your Order.</font> <br><br>
+                     <form action="/cartTextFormchocomans" method="POST">
+                        <button id="btnchocomans" type='button' onclick="addToCartchocomans(); return false;">Add To Cart</button>
+                        <button id="btnchocomans" type='button' onclick="clearCartchocomans(); return false;">Clear Cart</button>
+                        
+
+                             <!----<textarea hidden="hidden" id="cartText" name="cartText" rows="4" cols="50"></textarea>-->
+                             <textarea hidden="hidden" id="cartTextchocomans" name="cartTextchocomans" rows="4" cols="50"></textarea><br>
+                             <label for="phoneNumber">Enter your Phone Number:</label>
+                             <input type="tel" id="chocomansphone" name="chocomansphonenumber" required> <br>
+                         
+                         
+                         
+                         
+                          <label hidden="hidden" for="vendorNumber">Enter Vendor Phone Number:</label>
+                             <input hidden="hidden" type="tel" id="vendorNumber" name="vendorNumber" required value="9962989796">
+                         
+                         
+                         
+                           <label for="chocomansname">Enter your Name:</label>
+                             <input type="text" id="chocomansname" name="chocomansname" required> <br>
+                         
+                              <label for="chocomansaddress">Select your address:</label>
+                                <select id="chocomansaddress" name="chocomansaddress">
+                                      <option value="Oori hostel">Oori hostel</option>
+                                  <option value="Paari hostel">Paari hostel</option>
+                                  <option value="Adhyaman hostel">Adhyaman hostel</option>
+                                  <option value="Kalpana Chawla">Kalpana Chawla</option>
+                                  <option value="M block">M block</option>
+                                     <option value="kaari hostel">Kaari hostel</option>
+                                     <option value="Meenakshi hostel">Meenakshi hostel</option>
+                                     <option value="Tamarai hostel">tamarai hostel</option>
+                                     <option value="Manoranjitam hostel">Manoranjitam hostel</option>
+                               </select>
+
+                         <br>
+
+                          <label for="chocomansroom">Enter your Room Number:</label>
+                             <input type="tel" id="chocomansroom" name="chocomansroom" required> <br>
+                         
+                         
+                                  <input type="submit" value="Place Order">
+                        </form>
+
+                          </p>
+                          
+ 
+                        <h3>Cart Details</h3>
+                        <p>Number of items: <span id="chocomansnumItems">0</span></p>
+                        <ul id="chocomanscartList"></ul>
+                        <p>Total Cost: Rs.<span id="chocomanstotalCost">0</span></p>
